@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background: linear-gradient(45deg, #fea0af, #7ff7f3, #83fea8, #fae1ba);
+            height: 100vh;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .main {
+            background: rgba(255, 255, 255, 0.3);
+            width: 40%;
+            padding: 3em;
+            height: 430px;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(10px);
+            box-shadow: 20px 20px 40px -6px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            position: relative;
+            left: 50%;
+            transform: translate(-50%);
+        }
+
+        input {
+            background: transparent;
+            width: 200px;
+            padding: 1em;
+            border: 1px solid black(255, 255, 255, 0.3);
+            border-radius: 5000px;
+            backdrop-filter: blur(5px);
+            color: black;
+            font-weight: 900;
+        }
+        button{
+            background: transparent;
+            width: 200px;
+            padding: 1em;
+            border: 1px solid black(255, 255, 255, 0.3);
+            border-radius: 5000px;
+            backdrop-filter: blur(15px);
+            color: black;
+            font-weight: 900;
+        }
+        p{
+            font-family: monospace;
+            font-size: xx-large;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <h1>Enter value to generate Table</h1>
+
+        <input type="text" name="" id="input">
+        <button onclick="generate()">Generate Table</button>
+        <p id="table"></p>
+    </div>
+
+    <script>
+        function generate() {
+            // take input from the user
+            const num = document.getElementById("input").value;
+            for (var i = 1; i <= 10; i++) {
+                let result = num * i
+                document.getElementById("table").innerHTML += num + " x " + i + " = " + result + "<br/>";
+            }
+        }
+
+
+    </script>
+</body>
+
+</html>
